@@ -14,8 +14,11 @@
             <H1 class="title">Todo Today</H1>
             
             <div id="insert">
-                <input class="inputList" type="text" placeholder="Insira aqui sua tarefa para hoje">
-                <button class="addButton" >Add</button>
+                <div id="input-box">
+                    <input class="inputList" type="text" placeholder="Insira aqui sua tarefa para hoje">
+                    <button class="addButton" onclick="validateInput()" >Add</button>
+                </div>
+                <span class="error"><a></a></span>
             </div>
 
         </section>
@@ -23,8 +26,10 @@
         <section id="sectionTasks">
 
             <div id="todo">
+                <p class="loading">Sem tarefas, até então...</p>
                 
                 <ul class="listTasks">
+
                     
                 </ul>
             </div>
