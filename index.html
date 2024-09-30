@@ -3,50 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Todo Today</title>
 </head>
 <body>
-
     <div id="main">
-        <section id="list">
-            <H1 class="title">Todo Today</H1>
-            
-            <div id="insert">
-                <div id="input-box">
-                    <input class="inputList" type="text" placeholder="Insira aqui sua tarefa para hoje">
-                    <button class="addButton" onclick="validateInput()" >Add</button>
+        <form action="" id="loginForm">
+            <h1 class="title-login">Login</h1>
+            <div id="content">
+                <div class="input-box">
+                    <label class="title-input" for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu email..." class="input-input" required>
+                    <small class="error-message"></small>
                 </div>
-                <span class="error"><a></a></span>
+                <div class="input-box">
+                    <label class="title-input" for="password">Senha</label>
+                    <div class="password-wrapper">
+                        <input type="password" placeholder="Digite sua senha..." class="input-input" id="password" required>
+                        <i class="bi bi-eye-slash" id="togglePassword" onclick="togglePasswordVisibility()"></i>
+                    </div>
+                    <small class="error-message"></small>
+                </div>
             </div>
-
-        </section>
-
-        <section id="sectionTasks">
-
-            <div id="todo">
-                <p class="loading">Sem tarefas, até então...</p>
-                
-                <ul class="listTasks">
-
-                    
-                </ul>
+            <p class="no-account">Não possui conta? <a href="/register.html">Cadastre-se</a></p>
+            <div class="div-button">
+                <button type="submit" class="button-submit">Entrar</button>
             </div>
-
-            <div id="finished">
-                <h1 class="finishedTitle">Finalizadas</h1>
-
-                <ul class="finishedTasks">
-
-                </ul>
-
-            </div>
-
-        </section>
+        </form>
         
     </div>
-    
+    <script src="/scripts/login.js"></script>
 </body>
-<script src="scripts.js"></script>
 </html>
